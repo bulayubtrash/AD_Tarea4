@@ -12,6 +12,7 @@ import java.util.Scanner;
 /**
  * Esta clase se encarga de gestionar la creación de alumnos y la escritura
  * de sus datos en un archivo binario.
+ * @author Ayoub Rehouni
  */
 public class Gestor {
 	Scanner sc = new Scanner(System.in);

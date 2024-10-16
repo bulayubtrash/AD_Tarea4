@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Esta clase es la clase principal en la cual se ejecutan los metodos creados
- * 
+ * @author Ayoub Rehouni
  */
 public class Ejercicio1 {
 

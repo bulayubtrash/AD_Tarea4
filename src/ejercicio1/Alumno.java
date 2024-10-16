@@ -4,6 +4,7 @@ import java.util.Date;
 
 /**
  * En esta clase creamos los atributos del objeto Alumno
+ * @author Ayoub Rehouni
  */
 public class Alumno {
 	private int nia;
