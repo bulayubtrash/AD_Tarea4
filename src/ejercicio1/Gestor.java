@@ -9,10 +9,20 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
+/**
+ * Esta clase se encarga de gestionar la creación de alumnos y la escritura
+ * de sus datos en un archivo binario.
+ */
 public class Gestor {
 	Scanner sc = new Scanner(System.in);
 	Alumno a1 = new Alumno();
 
+	/**
+	 * Este método permite crear un alumno pidiendo datos por consola, y
+	 * posteriormente los guarda en un archivo binario.
+	 *
+	 * @param ruta Ruta del archivo donde se guardarán los datos del alumno.
+	 */
 	public void crearAlumno(String ruta) {
 		for (int i = 0; i < 3; i++) {
 
@@ -57,14 +67,20 @@ public class Gestor {
 
 			System.out.println("Intoduzca el Grupo");
 			a1.setGrupo(sc.nextLine());
-			
+
 			guardarFichero(ruta);
 		}
 
 	}
-	
+
+	/**
+	 * Este método guarda los datos del alumno actual en un archivo binario. Escribe
+	 * los datos de un alumno en el archivo especificado por la ruta.
+	 *
+	 * @param ruta Ruta del archivo donde se guardarán los datos.
+	 */
 	public void guardarFichero(String ruta) {
-		File fichero = new File(ruta+".dat");
+		File fichero = new File(ruta + ".dat");
 		DataOutputStream dos;
 		try {
 			dos = new DataOutputStream(new FileOutputStream(fichero, true));
@@ -72,10 +88,10 @@ public class Gestor {
 			dos.writeUTF(a1.getNombre());
 			dos.writeUTF(a1.getApellidos());
 			dos.write(a1.getGenero());
-			
+
 			SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 			dos.writeUTF(formato.format(a1.getFechaNac()));
-			
+
 			dos.writeUTF(a1.getCiclo());
 			dos.writeUTF(a1.getCurso());
 			dos.writeUTF(a1.getGrupo());
@@ -88,8 +104,6 @@ public class Gestor {
 			e.printStackTrace();
 		}
 
-		
-		
 	}
 
 }

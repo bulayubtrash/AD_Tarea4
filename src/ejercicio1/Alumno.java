@@ -2,6 +2,9 @@ package ejercicio1;
 
 import java.util.Date;
 
+/**
+ * En esta clase creamos los atributos del objeto Alumno
+ */
 public class Alumno {
 	private int nia;
 	private String nombre;
