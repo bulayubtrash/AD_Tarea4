@@ -25,7 +25,7 @@ public class Gestor {
 	 * @param ruta Ruta del archivo donde se guardarán los datos del alumno.
 	 */
 	public void crearAlumno(String ruta) {
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 5; i++) {
 
 			a1 = new Alumno();
 			System.out.println("Introduzca los siguientes datos:");
